@@ -18,6 +18,10 @@ export class DisplayComponent implements OnInit {
     this.quotes[index].showUser = !this.quotes[index].showUser;
   }
 
+  deleteIt(index){
+      this.quotes.splice(index,1);
+  }
+
   constructor() { }
 
   ngOnInit() {
