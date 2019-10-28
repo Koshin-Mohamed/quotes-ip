@@ -22,6 +22,16 @@ export class DisplayComponent implements OnInit {
       this.quotes.splice(index,1);
   }
 
+  like = 0;
+  likes(){
+    this.like=this.like+1;
+  }
+
+  unlike = 0
+  unlikes(){
+    this.unlike=this.unlike+1;
+  }
+
   constructor() { }
 
   ngOnInit() {

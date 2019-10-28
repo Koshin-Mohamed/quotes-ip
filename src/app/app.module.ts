@@ -5,7 +5,6 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FormComponent } from "./form/form.component";
 import { DisplayComponent } from "./display/display.component";
-import { UpAndDownvoteComponent } from "./display/up-and-downvote/up-and-downvote.component";
 import { DetailsComponent } from "./display/details/details.component";
 
 @NgModule({
@@ -13,7 +12,6 @@ import { DetailsComponent } from "./display/details/details.component";
     AppComponent,
     FormComponent,
     DisplayComponent,
-    UpAndDownvoteComponent,
     DetailsComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
