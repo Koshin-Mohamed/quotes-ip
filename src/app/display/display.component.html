@@ -1,12 +1,17 @@
 <ul>
-  <div *ngFor="let quote of quotes; let i =index">
-    <li> {{ quote.quote }} -
-    <strong
-      ><em>{{ quote.author }}</em></strong
-    >
-    <button (click)='toggleUser(i)'>Submitted by</button>
-    <p *ngIf="quote.showUser" {{ quote.user }}> </p>
-  </li>
+  <div *ngFor="let quote of quotes; let i = index">
+    <li style="list-style: none;">
+      {{ quote.quote }} -
+      <strong
+        ><em>{{ quote.author }}</em></strong
+      >
+    </li>
+    <br />
+    <button (click)="toggleUser(i)" class="btn btn-outline-success">See Contributor</button>
+    <br>
+    <br>
+    <app-details *ngIf="quote.showUser" [quote]="quote"></app-details>
+    <br>
+    <br>
   </div>
 </ul>
-
