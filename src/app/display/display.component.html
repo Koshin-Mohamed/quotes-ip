@@ -1,1 +1,12 @@
-<p>display works!</p>
+<ul>
+  <div *ngFor="let quote of quotes; let i =index">
+    <li> {{ quote.quote }} -
+    <strong
+      ><em>{{ quote.author }}</em></strong
+    >
+    <button (click)='toggleUser(i)'>Submitted by</button>
+    <p *ngIf="quote.showUser" {{ quote.user }}> </p>
+  </li>
+  </div>
+</ul>
+
