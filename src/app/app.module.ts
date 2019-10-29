@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { FormComponent } from "./form/form.component";
 import { DisplayComponent } from "./display/display.component";
 import { DetailsComponent } from "./display/details/details.component";
-import { DateCountPipe } from './date-count.pipe';
+import { DateCountPipe } from "./date-count.pipe";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,9 +15,9 @@ import { DateCountPipe } from './date-count.pipe';
     FormComponent,
     DisplayComponent,
     DetailsComponent,
-    DateCountPipe,
+    DateCountPipe
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
