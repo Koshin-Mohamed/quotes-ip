@@ -13,6 +13,7 @@ export class DetailsComponent implements OnInit {
 
   deleteQuote(complete:boolean){
     this.isSeen.emit(complete);
+    
   }
 
   constructor() { }

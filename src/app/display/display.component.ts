@@ -19,20 +19,28 @@ export class DisplayComponent implements OnInit {
   }
 
   deleteIt(index){
-    confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+    var message =  confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+    if (message){
     this.quotes.splice(index,1)
   }
-
-  like = 0;
-  likes(){
-  this.like++;
+  }
+  
+  likes(index){
+  this.quotes[index].likes+=1;
   }
 
-  unlike = 0;
-  unlikes(){
-    this.unlike++;
+  
+  unlikes(index){
+    this.quotes[index].unlikes+=1;
   }
 
+
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate)    
+    this.quotes.push(quote)
+  }
   constructor() { }
 
   ngOnInit() {

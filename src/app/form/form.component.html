@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h1>What's Your Favorite Quote?</h1>
   <hr />
-  <form #quotesForm="ngForm">
+  <form (ngSubmit)='submitQuote()' #quotesForm="ngForm">
     <div class="form-group">
       <label for="author">Author</label>
       <input

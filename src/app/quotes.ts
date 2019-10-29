@@ -1,5 +1,5 @@
 export class Quotes {
-  showUser: boolean;
+  showUser: boolean; likes: number; unlikes: number;
   constructor(
     public id: number,
     public author: string,
@@ -7,6 +7,6 @@ export class Quotes {
     public user: string,
     public completeDate: Date
   ) {
-    this.showUser = false;
+    this.showUser = false; this.likes = 0; this.unlikes = 0;
   }
 }
