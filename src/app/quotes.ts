@@ -4,7 +4,8 @@ export class Quotes {
     public id: number,
     public author: string,
     public quote: string,
-    public user: string
+    public user: string,
+    public completeDate: Date
   ) {
     this.showUser = false;
   }

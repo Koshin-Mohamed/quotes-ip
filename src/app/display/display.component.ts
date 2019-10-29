@@ -9,9 +9,9 @@ import { Quotes } from "../quotes";
 export class DisplayComponent implements OnInit {
 
   quotes: Quotes[] = [
-    new Quotes (1, "Biggie Smalls", "\"As I leave my competition respirator style, climb the ladder to success escalator style\"", "Koshin"),
-    new Quotes (2, "Nipsey Hussle", "\"Never let a hard time humble us\"", "Salma"),
-    new Quotes (3, "Jay-Z", "\"Difficulty takes a day impossible takes a week\"", "Jibril"),
+    new Quotes (1, "Biggie Smalls", "\"As I leave my competition respirator style, climb the ladder to success escalator style\"", "Koshin", new Date(2019,12,19)),
+    new Quotes (2, "Nipsey Hussle", "\"Never let a hard time humble us\"", "Salma", new Date(2020,7,14)),
+    new Quotes (3, "Jay-Z", "\"Difficulty takes a day impossible takes a week\"", "Jibril", new Date(2023,8,16)),
   ];
 
   toggleUser(index){
@@ -23,7 +23,7 @@ export class DisplayComponent implements OnInit {
   }
 
   like = 0;
-  likes(){
+  likes(index){
     this.like=this.like+1;
   }
 
