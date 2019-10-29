@@ -1,8 +1,8 @@
 <app-form (addQuote)="addNewQuote($event)"></app-form>
 <br>
 <br>
-<ul>
-  <div *ngFor="let quote of quotes; let i = index">
+<ul style="text-align:center;">
+  <div *ngFor="let quote of quotes; let i = index" style="background-color: rgba(0, 0, 0, 0.3); margin-bottom: 10px; border-radius: 5px; padding: 10px;">
     <li style="list-style: none;">
       {{ quote.quote }} -
       <strong
@@ -17,7 +17,6 @@
     <br>
     <br>
     <app-details *ngIf="quote.showUser" [quote]="quote"></app-details>
-    <br>
     <br>
   </div>
 </ul>

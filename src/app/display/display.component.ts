@@ -25,6 +25,8 @@ export class DisplayComponent implements OnInit {
   }
   }
   
+  
+
   likes(index){
   this.quotes[index].likes+=1;
   }
