@@ -1,3 +1,6 @@
+<app-form (addQuote)="addNewQuote($event)"></app-form>
+<br>
+<br>
 <ul>
   <div *ngFor="let quote of quotes; let i = index">
     <li style="list-style: none;">
@@ -18,4 +21,3 @@
     <br>
   </div>
 </ul>
-<app-form (addQuote)="addNewQuote($event)"></app-form>
