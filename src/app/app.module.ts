@@ -8,6 +8,7 @@ import { DisplayComponent } from "./display/display.component";
 import { DetailsComponent } from "./display/details/details.component";
 import { DateCountPipe } from "./date-count.pipe";
 import { FormsModule } from "@angular/forms";
+import { HighlighterDirective } from './highlighter.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from "@angular/forms";
     FormComponent,
     DisplayComponent,
     DetailsComponent,
-    DateCountPipe
+    DateCountPipe,
+    HighlighterDirective
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
