@@ -5,7 +5,7 @@ export class Quotes {
     public author: string,
     public quote: string,
     public user: string,
-    public completeDate: Date
+    public completeDate: any
   ) {
     this.showUser = false; this.likes = 0; this.unlikes = 0;
   }
