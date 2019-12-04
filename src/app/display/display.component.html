@@ -1,8 +1,15 @@
 <app-form (addQuote)="addNewQuote($event)"></app-form>
-<br>
-<br>
+<br />
+<br />
 <ul style="text-align:center; color:white; padding: 0 15px 0 15px;">
-  <div *ngFor="let quote of quotes; let i = index" style="background-color: rgba(0, 0, 0, 0.3); margin-bottom: 10px; border-radius: 5px; padding: 10px; text-align: center;">
+  <div
+    *ngFor="let quote of quotes; let i = index"
+    style="background-color: rgba(0, 0, 0, 0.3); margin-bottom: 10px; border-radius: 5px; padding: 10px; text-align: center;"
+  >
+    <p
+      appHighlighter
+      *ngIf="highestLikes() === quote.likes && quote.likes > 0"
+    ></p>
     <li style="list-style: none;">
       {{ quote.quote }} -
       <strong
@@ -10,13 +17,24 @@
       >
     </li>
     <br />
-    <button (click)="toggleUser(i)" class="btn btn-outline-success"><i class="fas fa-eye"></i> Contributor</button> &nbsp;
-    <button (click) = "deleteIt(i)" class="btn btn-outline-danger"><i class="fas fa-trash"></i> </button> &nbsp;
-    <button (click) = "likes(i)" class="btn btn-outline-dark"><i class="fas fa-heart"></i><span> {{quote.likes }}</span></button> &nbsp;
-    <button (click) = "unlikes(i)" class="btn btn-outline-dark"><i class="fas fa-heart-broken"></i> {{ quote.unlikes }}<span></span></button>
-    <br>
-    <br>
+    <button (click)="toggleUser(i)" class="btn btn-outline-success">
+      <i class="fas fa-eye"></i> Contributor
+    </button>
+    &nbsp;
+    <button (click)="deleteIt(i)" class="btn btn-outline-danger">
+      <i class="fas fa-trash"></i>
+    </button>
+    &nbsp;
+    <button (click)="likes(i)" class="btn btn-outline-dark">
+      <i class="fas fa-heart"></i><span> {{ quote.likes }}</span>
+    </button>
+    &nbsp;
+    <button (click)="unlikes(i)" class="btn btn-outline-dark">
+      <i class="fas fa-heart-broken"></i> {{ quote.unlikes }}<span></span>
+    </button>
+    <br />
+    <br />
     <app-details *ngIf="quote.showUser" [quote]="quote"></app-details>
-    <br>
+    <br />
   </div>
 </ul>

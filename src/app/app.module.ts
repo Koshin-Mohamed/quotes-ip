@@ -6,9 +6,10 @@ import { AppComponent } from "./app.component";
 import { FormComponent } from "./form/form.component";
 import { DisplayComponent } from "./display/display.component";
 import { DetailsComponent } from "./display/details/details.component";
-import { DateCountPipe } from "./date-count.pipe";
 import { FormsModule } from "@angular/forms";
 import { HighlighterDirective } from './highlighter.directive';
+import {TimeAgoPipe} from 'time-ago-pipe';
+
 
 @NgModule({
   declarations: [
@@ -16,10 +17,10 @@ import { HighlighterDirective } from './highlighter.directive';
     FormComponent,
     DisplayComponent,
     DetailsComponent,
-    DateCountPipe,
-    HighlighterDirective
+    HighlighterDirective,
+    TimeAgoPipe
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,],
   providers: [],
   bootstrap: [AppComponent]
 })
